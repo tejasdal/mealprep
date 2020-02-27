@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">Meal Prep</string>
+    <string name="team_name">Optimus</string>
+    <string name="title_activity_sample">Sample</string>
+    <string name="title_home">Home</string>
+    <string name="title_my_recipe">My Recipe</string>
+    <string name="title_profile">Profile</string>
+</resources>
