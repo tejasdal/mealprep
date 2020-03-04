@@ -5,4 +5,14 @@
     <string name="title_home">Home</string>
     <string name="title_my_recipe">My Recipe</string>
     <string name="title_profile">Profile</string>
+    <string name="email">Email</string>
+    <string name="password">Password</string>
+    <string name="email_address">Format: *****@****.***</string>
+    <string name="password_valid">Enter Valid Password</string>
+    <string name="login">Login</string>
+    <string name="create_account">Create an Account?</string>
+    <string name="First_Name">First Name</string>
+    <string name="Last_Name">Last Name</string>
+    <string name="SignUp">Sign Up</string>
+    <string name="CreateAccount">Create an Account</string>
 </resources>

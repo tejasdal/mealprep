@@ -4,4 +4,7 @@
     <color name="colorPrimaryDark">#00574B</color>
     <color name="colorAccent">#D81B60</color>
     <color name="splashScreen">#FFFFFF</color>
+    <color name="hyperlink">#A01742</color>
+    <color name="button_color">#5C29BD</color>
+    <color name="button_text">#FFFFFF</color>
 </resources>
