@@ -23,5 +23,5 @@ class SplashActivity : AppCompatActivity() {
             navigateTo(this,MainActivity::class.java)
         }, getSplashScreenTime())
     }
-    private fun getSplashScreenTime(): Long = 2000
+    private fun getSplashScreenTime(): Long = 200
 }

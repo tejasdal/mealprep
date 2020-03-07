@@ -1,13 +1,22 @@
 package org.dal.mc.optimus.activity
 
 import android.os.Bundle
-import com.google.android.material.bottomnavigation.BottomNavigationView
+import android.text.Editable
+import android.text.TextWatcher
+import android.text.method.Touch
+import android.util.Log
+import android.view.View
+import android.widget.EditText
 import androidx.appcompat.app.AppCompatActivity
+import androidx.fragment.app.FragmentTransaction
 import androidx.navigation.findNavController
 import androidx.navigation.ui.AppBarConfiguration
-import androidx.navigation.ui.setupActionBarWithNavController
 import androidx.navigation.ui.setupWithNavController
+import com.google.android.material.bottomnavigation.BottomNavigationView
+import kotlinx.android.synthetic.main.activity_main.*
 import org.dal.mc.optimus.R
+import org.dal.mc.optimus.activity.ui.home.SearchFragment
+
 
 class MainActivity : AppCompatActivity() {
 
@@ -24,7 +33,6 @@ class MainActivity : AppCompatActivity() {
                 R.id.navigation_home, R.id.navigation_my_recipe, R.id.navigation_profile
             )
         )
-        setupActionBarWithNavController(navController, appBarConfiguration)
         navView.setupWithNavController(navController)
     }
 }
