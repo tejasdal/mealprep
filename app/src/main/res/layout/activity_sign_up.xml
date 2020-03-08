@@ -21,13 +21,12 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_centerHorizontal="true"
-            android:layout_marginTop="0dp"
             android:text="@string/CreateAccount"
-            android:textColor="@color/hyperlink"
-            android:textSize="30sp"
-            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
+            app:layout_constraintEnd_toEndOf="parent"
+            android:textColor="@color/hyperlink"
+            android:textSize="30sp" />
 
         <!-- Login Text Fields -->
         <com.google.android.material.textfield.TextInputLayout
@@ -104,7 +103,7 @@
         </com.google.android.material.textfield.TextInputLayout>
 
         <com.google.android.material.textfield.TextInputLayout
-            android:id="@+id/ip_layout_password_signup"
+            android:id="@+id/ip_layout_Password"
             style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
@@ -144,7 +143,7 @@
             android:textColor="@color/button_text"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/ip_layout_password_signup" />
+            app:layout_constraintTop_toBottomOf="@+id/ip_layout_Password" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 

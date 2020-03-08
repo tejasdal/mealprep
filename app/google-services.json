@@ -1,58 +1,21 @@
 {
   "project_info": {
-    "project_number": "14739124",
-    "firebase_url": "https://mealprep-g18.firebaseio.com",
-    "project_id": "mealprep-g18",
-    "storage_bucket": "mealprep-g18.appspot.com"
+    "project_number": "604987474966",
+    "firebase_url": "https://mealprep-group18.firebaseio.com",
+    "project_id": "mealprep-group18",
+    "storage_bucket": "mealprep-group18.appspot.com"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:14739124:android:ec5e672078bc9b730b19e1",
-        "android_client_info": {
-          "package_name": "com.mc.optimus"
-        }
-      },
-      "oauth_client": [
-        {
-          "client_id": "14739124-abtuo078orp7vaedfkm073psn1sa2hku.apps.googleusercontent.com",
-          "client_type": 1,
-          "android_info": {
-            "package_name": "com.mc.optimus",
-            "certificate_hash": "11f9efa164934dc4f5d23c6ee1790a3aa2f43a51"
-          }
-        },
-        {
-          "client_id": "14739124-h0fkj47tfl1r1064kqi9u6rde186ac5e.apps.googleusercontent.com",
-          "client_type": 3
-        }
-      ],
-      "api_key": [
-        {
-          "current_key": "AIzaSyCpQbc_2Al0dsZE9xyp4W377POdwzByfNQ"
-        }
-      ],
-      "services": {
-        "appinvite_service": {
-          "other_platform_oauth_client": [
-            {
-              "client_id": "14739124-h0fkj47tfl1r1064kqi9u6rde186ac5e.apps.googleusercontent.com",
-              "client_type": 3
-            }
-          ]
-        }
-      }
-    },
-    {
-      "client_info": {
-        "mobilesdk_app_id": "1:14739124:android:b46e8570eaf787250b19e1",
+        "mobilesdk_app_id": "1:604987474966:android:eb623f48bdb68ae6ace137",
         "android_client_info": {
           "package_name": "org.dal.mc.optimus"
         }
       },
       "oauth_client": [
         {
-          "client_id": "14739124-npn332j4sfhvktr8b939mqdutvv2l2r2.apps.googleusercontent.com",
+          "client_id": "604987474966-mbh1mn9agujfs45ejcfbi3dq5s8thsgb.apps.googleusercontent.com",
           "client_type": 1,
           "android_info": {
             "package_name": "org.dal.mc.optimus",
@@ -60,20 +23,20 @@
           }
         },
         {
-          "client_id": "14739124-h0fkj47tfl1r1064kqi9u6rde186ac5e.apps.googleusercontent.com",
+          "client_id": "604987474966-2ur5bvgd1hfa1bf1e9n4ojrjpfjlv6tc.apps.googleusercontent.com",
           "client_type": 3
         }
       ],
       "api_key": [
         {
-          "current_key": "AIzaSyCpQbc_2Al0dsZE9xyp4W377POdwzByfNQ"
+          "current_key": "AIzaSyCsaSFwP_hMBKAVDGPs8IcXhpw_QctlRk4"
         }
       ],
       "services": {
         "appinvite_service": {
           "other_platform_oauth_client": [
             {
-              "client_id": "14739124-h0fkj47tfl1r1064kqi9u6rde186ac5e.apps.googleusercontent.com",
+              "client_id": "604987474966-2ur5bvgd1hfa1bf1e9n4ojrjpfjlv6tc.apps.googleusercontent.com",
               "client_type": 3
             }
           ]
