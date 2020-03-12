@@ -22,4 +22,20 @@
         android:name="org.dal.mc.optimus.activity.ui.myrecipe.MyRecipeFragment"
         android:label="@string/title_my_recipe"
         tools:layout="@layout/fragment_my_recipe" />
+
+    <fragment
+        android:id="@+id/navigation_my_signIn"
+        android:name="org.dal.mc.optimus.activity.ui.login.LogInFragment"
+        tools:layout="@layout/fragment_login" />
+
+    <fragment
+        android:id="@+id/navigation_my_signUp"
+        android:name="org.dal.mc.optimus.activity.ui.login.SignUpFragment"
+        tools:layout="@layout/fragment_signup" />
+
+    <fragment
+        android:id="@+id/navigation_my_forgot_password"
+        android:name="org.dal.mc.optimus.activity.ui.login.ForgotPasswordFragment"
+        tools:layout="@layout/fragment_forgot_password" />
+
 </navigation>
