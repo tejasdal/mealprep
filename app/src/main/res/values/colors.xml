@@ -8,4 +8,7 @@
     <color name="colorgrey">#fafafa</color>
     <color name="colordarkblue">#09c6df</color>
     <color name="colorlightblue">#0bcce6</color>
+    <color name="hyperlink">#A01742</color>
+    <color name="button_color">#5C29BD</color>
+    <color name="button_text">#FFFFFF</color>
 </resources>

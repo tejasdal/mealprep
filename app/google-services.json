@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "604987474966",
+    "firebase_url": "https://mealprep-group18.firebaseio.com",
+    "project_id": "mealprep-group18",
+    "storage_bucket": "mealprep-group18.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:604987474966:android:eb623f48bdb68ae6ace137",
+        "android_client_info": {
+          "package_name": "org.dal.mc.optimus"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "604987474966-mbh1mn9agujfs45ejcfbi3dq5s8thsgb.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "org.dal.mc.optimus",
+            "certificate_hash": "11f9efa164934dc4f5d23c6ee1790a3aa2f43a51"
+          }
+        },
+        {
+          "client_id": "604987474966-2ur5bvgd1hfa1bf1e9n4ojrjpfjlv6tc.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCsaSFwP_hMBKAVDGPs8IcXhpw_QctlRk4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "604987474966-2ur5bvgd1hfa1bf1e9n4ojrjpfjlv6tc.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

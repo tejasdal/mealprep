@@ -9,4 +9,5 @@
     <dimen name="grid_item_height">170dp</dimen>
     <dimen name="list_item_margin">5dp</dimen>
     <dimen name="main_item_margin">10dp</dimen>
+    <dimen name="fab_margin">16dp</dimen>
 </resources>

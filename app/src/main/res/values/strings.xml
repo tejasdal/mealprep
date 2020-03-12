@@ -6,4 +6,19 @@
     <string name="title_my_recipe">My Recipe</string>
     <string name="title_profile">Profile</string>
     <integer name="img_corner">10</integer>
+    <string name="email">Email</string>
+    <string name="password">Password</string>
+    <string name="email_address">Format: *****@****.***</string>
+    <string name="password_valid">Enter Valid Password</string>
+    <string name="login">Login</string>
+    <string name="create_account">Create an Account</string>
+    <string name="First_Name">First Name</string>
+    <string name="Last_Name">Last Name</string>
+    <string name="SignUp">Sign Up</string>
+    <string name="CreateAccount">Create an Account</string>
+    <string name="forgot_password">Forgot Password?</string>
+    <string name="sign_out">SIGN OUT</string>
+    <string name="reset_email">Send to your Email address</string>
+    <string name="title_activity_login">LoginActivity</string>
+    <string name="title_activity_sign_up">SignUpActivity</string>
 </resources>
