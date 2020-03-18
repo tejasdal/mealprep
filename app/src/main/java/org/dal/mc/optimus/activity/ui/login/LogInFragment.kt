@@ -35,8 +35,6 @@ class LogInFragment : Fragment() {
         fun newInstance() = LogInFragment()
     }
 
-    private lateinit var viewModel: LogInViewModel
-
     /** Initialising the text fields rendered from the UI **/
     private var forgotPassword: TextView? = null
     private var email_text: EditText? = null
@@ -87,7 +85,6 @@ class LogInFragment : Fragment() {
 
     override fun onActivityCreated(savedInstanceState: Bundle?) {
         super.onActivityCreated(savedInstanceState)
-        viewModel = ViewModelProviders.of(this).get(LogInViewModel::class.java)
 
         /** starting the activity **/
         userActions()

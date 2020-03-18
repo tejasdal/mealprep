@@ -10,10 +10,14 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.Button
 import android.widget.EditText
+import android.widget.ScrollView
 import android.widget.Toast
 import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.findNavController
 import com.google.firebase.auth.FirebaseAuth
+import com.google.firebase.auth.FirebaseAuthInvalidCredentialsException
+import com.google.firebase.auth.FirebaseAuthUserCollisionException
+import com.google.firebase.auth.FirebaseAuthWeakPasswordException
 import com.google.firebase.database.DatabaseReference
 import com.google.firebase.database.FirebaseDatabase
 import kotlinx.android.synthetic.main.fragment_signup.*
@@ -34,6 +38,7 @@ class SignUpFragment : Fragment() {
     private var et_Email: EditText? = null
     private var et_Password_text: EditText? = null
     private var btnSignUp: Button? = null
+    private var scrollView: ScrollView? = null
     private var progressBar: ProgressDialog? = null
     private var dbReference: DatabaseReference? = null
     private var firebasedb: FirebaseDatabase? = null
@@ -86,6 +91,7 @@ class SignUpFragment : Fragment() {
         et_Password_text = et_Password
         btnSignUp = btn_SignUp
         progressBar = ProgressDialog(context)
+        scrollView = scrollViewXML
         firebasedb = FirebaseDatabase.getInstance("https://mealprep-group18.firebaseio.com")
         dbReference = firebasedb!!.reference!!.child("Users")
         firebaseAuth = FirebaseAuth.getInstance()
@@ -100,6 +106,10 @@ class SignUpFragment : Fragment() {
             if(validateEmail()!! && validatePassword()!! && isvalidFirstname()!! && isvalidLastname()!!) {
                 validateAccount()
             }
+
+            scrollView!!.post(Runnable {
+                scrollView!!.fullScroll(View.FOCUS_DOWN)
+            })
         }
     }
 
@@ -128,8 +138,23 @@ class SignUpFragment : Fragment() {
                     }
                     /** If sign in fails update the user **/
                     else {
-                        Toast.makeText(context,"Authentication Failed",Toast.LENGTH_SHORT).show()
-                        Log.w("Signup Error", "onCancelled", task.getException());
+                        try {
+                            throw task.exception!!
+                        }
+                        catch (weakPassword: FirebaseAuthWeakPasswordException) {
+                            Log.d("Signup Error", "onComplete: weak_password")
+                            Toast.makeText(context,"Weak password",Toast.LENGTH_SHORT).show()
+                        }
+                        catch (malformedEmail: FirebaseAuthInvalidCredentialsException) {
+                            Log.d("Signup Error", "onComplete: malformed_email")
+                            Toast.makeText(context,"Malformed Emain",Toast.LENGTH_SHORT).show()
+                        } catch (existEmail: FirebaseAuthUserCollisionException) {
+                            Log.d("Signup Error", "onComplete: exist_email")
+                            ip_layout_email.setError("Email Already Exists")
+                        } catch (e: Exception) {
+                            Log.d("Signup Error", "onComplete: " + e.message)
+                            Toast.makeText(context,"Authentication Failed",Toast.LENGTH_SHORT).show()
+                        }
                     }
                     progressBar!!.hide()
                 }
