@@ -22,8 +22,6 @@ class ForgotPasswordFragment : Fragment() {
         fun newInstance() = ForgotPasswordFragment()
     }
 
-    private lateinit var viewModel: ForgotPasswordViewModel
-
     /** Retreiving the UI elements **/
     private var text_Email: EditText? = null
     private var btnSend: Button? = null
@@ -40,7 +38,6 @@ class ForgotPasswordFragment : Fragment() {
 
     override fun onActivityCreated(savedInstanceState: Bundle?) {
         super.onActivityCreated(savedInstanceState)
-        viewModel = ViewModelProviders.of(this).get(ForgotPasswordViewModel::class.java)
 
         text_Email = et_email
         btnSend = btn_submit
