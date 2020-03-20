@@ -6,6 +6,7 @@ import android.content.Intent
 import android.net.ConnectivityManager
 import android.os.Bundle
 import android.text.TextUtils
+import android.util.Log
 import android.util.Patterns
 import android.view.LayoutInflater
 import android.view.View
@@ -23,9 +24,12 @@ import com.google.android.gms.auth.api.signin.GoogleSignInClient
 import com.google.android.gms.auth.api.signin.GoogleSignInOptions
 import com.google.android.gms.common.api.ApiException
 import com.google.android.gms.tasks.Task
-import com.google.firebase.auth.FirebaseAuth
-import com.google.firebase.auth.GoogleAuthProvider
+import com.google.firebase.auth.*
 import kotlinx.android.synthetic.main.fragment_login.*
+import kotlinx.android.synthetic.main.fragment_login.et_Password
+import kotlinx.android.synthetic.main.fragment_login.et_email
+import kotlinx.android.synthetic.main.fragment_login.ip_layout_email
+import kotlinx.android.synthetic.main.fragment_signup.*
 import org.dal.mc.optimus.R
 import java.util.regex.Pattern
 
@@ -168,7 +172,17 @@ class LogInFragment : Fragment() {
                         navigateToProfile()
                     }
                     else {
-                        Toast.makeText(context, "Authentication failed", Toast.LENGTH_SHORT).show()
+                        try {
+                            throw task.exception!!
+                        }
+                        catch (Password: FirebaseAuthInvalidUserException) {
+                            Log.d("Signup Error", "onComplete: user_doesnot_exists")
+                            ip_layout_email.setError("This User Not Found , Create A New Account")
+                        }
+                        catch (weakPassword: FirebaseAuthInvalidCredentialsException) {
+                            Log.d("Signup Error", "onComplete: weak_password")
+                            ip_layout_Password.setError("Password does not match with email address")
+                        }
                     }
                 }
             }
