@@ -143,7 +143,7 @@ class SignUpFragment : Fragment() {
                         }
                         catch (weakPassword: FirebaseAuthWeakPasswordException) {
                             Log.d("Signup Error", "onComplete: weak_password")
-                            Toast.makeText(context,"Weak password",Toast.LENGTH_SHORT).show()
+                            ip_layout_password_signup.setError("Weak password")
                         }
                         catch (malformedEmail: FirebaseAuthInvalidCredentialsException) {
                             Log.d("Signup Error", "onComplete: malformed_email")
