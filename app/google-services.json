@@ -15,6 +15,14 @@
       },
       "oauth_client": [
         {
+          "client_id": "604987474966-1je5o0crmis581cf6onchdpbsuotvv73.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "org.dal.mc.optimus",
+            "certificate_hash": "ced32f3eade7fbedd83794a452f921b3f85e1c80"
+          }
+        },
+        {
           "client_id": "604987474966-mbh1mn9agujfs45ejcfbi3dq5s8thsgb.apps.googleusercontent.com",
           "client_type": 1,
           "android_info": {

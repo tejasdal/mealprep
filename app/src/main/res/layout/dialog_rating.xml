@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:theme="@style/RecipeTheme"
+    android:padding="15dp"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+<!--    Subtitle-->
+    <TextView
+        android:id="@+id/txt_rating_subtitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        android:text="We're excited you tried it!"
+        android:textAppearance="?attr/textAppearanceHeadline6"
+        android:textColor="@color/colorAccent"
+        android:textStyle="bold"
+        />
+<!--    Title-->
+    <TextView
+        android:id="@+id/txt_rating_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@+id/txt_rating_subtitle"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:layout_marginBottom="10dp"
+        android:padding="@dimen/recipe_text_view_padding"
+        android:text="Would you make this recipe again?"
+        android:textAppearance="?attr/textAppearanceHeadline5"
+        android:gravity="center"
+        />
+<!--    Dislike button-->
+    <ImageView
+        android:id="@+id/btn_rating_dilike"
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        app:layout_constraintTop_toBottomOf="@+id/txt_rating_title"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toLeftOf="@+id/btn_rating_like"
+        android:background="@drawable/background_rating"
+        android:src="@drawable/ic_thumb_down_black_24dp"
+        android:padding="15dp"
+        />
+<!--    Like button-->
+    <ImageView
+        android:id="@+id/btn_rating_like"
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        app:layout_constraintTop_toBottomOf="@+id/txt_rating_title"
+        app:layout_constraintLeft_toRightOf="@+id/btn_rating_dilike"
+        app:layout_constraintRight_toRightOf="parent"
+        android:background="@drawable/background_rating"
+        android:src="@drawable/ic_thumb_up_black_24dp"
+        android:padding="15dp"
+        />
+<!--    NeverMind (Exit button)-->
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btn_rating_exit"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="Nevermind"
+        android:textAppearance="@style/TextAppearance.RecipeTheme.Button"
+        style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+        app:cornerRadius="4dp"
+        app:strokeColor="@color/colorPrimaryDark"
+        app:layout_constraintTop_toBottomOf="@+id/btn_rating_dilike"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        />
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -13,6 +13,7 @@
         app:layout_constraintTop_toTopOf="parent"
         android:background="#FFFFFF"
         app:liftOnScroll="true"
+        android:focusableInTouchMode="true"
         >
         <EditText
             android:id="@+id/search_bar"

@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <LinearLayout
+        android:id="@+id/ingredient_item_layout"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="2"
+        android:weightSum="5"
+        >
+<!--        Ingredient Name-->
+        <TextView
+            android:id="@+id/txt_ingredient_name"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="4"
+            android:textAppearance="@style/TextAppearance.RecipeTheme.Subtitle1"
+            android:paddingBottom="2dp"
+            android:paddingTop="4dp"
+            />
+        <TextView
+            android:id="@+id/txt_ingredient_value"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:textAppearance="@style/TextAppearance.RecipeTheme.Subtitle1"
+            android:textStyle="bold"
+            android:gravity="right"
+            android:paddingBottom="2dp"
+            android:paddingTop="4dp"
+            android:layout_gravity="right"
+            />
+    </LinearLayout>
+<!--    Line-->
+    <View
+        android:id="@+id/ingredient_line"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/colorgrey"
+        />
+</LinearLayout>

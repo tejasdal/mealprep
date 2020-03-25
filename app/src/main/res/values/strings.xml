@@ -21,4 +21,10 @@
     <string name="reset_email">Send to your Email address</string>
     <string name="title_activity_login">LoginActivity</string>
     <string name="title_activity_sign_up">SignUpActivity</string>
+    <string name="menu_share">Share</string>
+    <string name="menu_favorite">Like</string>
+    <string name="sample_comment">Remove Bananas on the top replaced with crumbled vanilla wafers, my pie didn\'t
+        turn out as firm as the one in the video but it still it was still tasty, also I would try this with a
+        thicker pie crust for the taste.
+    </string>
 </resources>

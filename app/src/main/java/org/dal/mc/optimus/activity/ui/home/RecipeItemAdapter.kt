@@ -9,6 +9,7 @@ class RecipeItemAdapter(var listRecipe:List<RecipeItem>):
         RecyclerView.Adapter<RecipeItemViewHolder>(){
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): RecipeItemViewHolder {
         val inflater = LayoutInflater.from(parent.context)
+
         return RecipeItemViewHolder(inflater, parent)
     }
 

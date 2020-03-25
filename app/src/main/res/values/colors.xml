@@ -11,4 +11,6 @@
     <color name="hyperlink">#A01742</color>
     <color name="button_color">#5C29BD</color>
     <color name="button_text">#FFFFFF</color>
+    <color name="colorBlack">#000000</color>
+    <color name="colorWhite">#FFFFFF</color>
 </resources>
