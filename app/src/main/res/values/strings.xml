@@ -1,6 +1,8 @@
 <resources>
-    <string name="app_name">Meal Prep</string>
+    <string name="app_name">MealPrep</string>
     <string name="team_name">Optimus</string>
+    <string name="product_of">Product of</string>
+    <string name="logo_content_description">Logo</string>
     <string name="title_activity_sample">Sample</string>
     <string name="title_home">Home</string>
     <string name="title_my_recipe">My Recipe</string>
@@ -27,6 +29,56 @@
         turn out as firm as the one in the video but it still it was still tasty, also I would try this with a
         thicker pie crust for the taste.
     </string>
+
+
+    <!--For Profile-->
+    <string name="upload">Upload</string>
+    <string name="recently_viewed">Recently Viewed</string>
+    <string name="uploaded_recipes">Uploaded Recipes</string>
+    <string name="logout">Logout</string>
+    <string name="search_hint">Search Recipes</string>
+
+    <!--For Home-->
+    <string name="home_image_title">Manchurian Fried Rice</string>
+    <string name="home_image_description">Home Image</string>
+    <string name="home_title1">Dessert Tonight</string>
+    <string name="home_title2">Party Food</string>
+    <string name="recent">Recent</string>
+
+
+    <!--For Rating Dialog-->
+    <string name="rating_message">We\'re excited you tried it!</string>
+    <string name="rating_question">Would you make this recipe again?</string>
+    <string name="rating_dislike_description">Dislike</string>
+    <string name="rating_like_description">Like</string>
+    <string name="rating_close_btn">Never mind</string>
+
+    <!--For Forgot Password Dialog-->
+    <string name="fp_title">Forgot Password?</string>
+    <string name="fp_hint">Enter Email Address</string>
+    <string name="fp_message">Link to reset password will be sent to this email address.</string>
+    <string name="fp_btn">Reset Password</string>
+
+    <!--For Upload Recipe-->
+    <string name="upload_hint">Enter Recipe Name</string>
+    <string name="upload_title">Upload Recipe</string>
+    <string name="upload_btn">UPLOAD RECIPE</string>
+
+    <!--For View Recipe-->
+
+    <string name="recipe_name_sample">Recipe Name</string>
+    <string name="recipe_ingredients_title">Ingredients</string>
+    <string name="recipe_nutrition_title">Nutrition Facts</string>
+    <string name="recipe_nutrition_hide">Hide info –</string>
+    <string name="recipe_export_btn">Export Nutrition Facts</string>
+    <string name="recipe_related">RELATED RECIPES</string>
+    <string name="recipe_rating_sample">95% would make it again</string>
+    <string name="recipe_time_sample">Ready in under 30 minutes</string>
+    <string name="recipe_serving_sample">for 3 servings</string>
+
+
+
+
 
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>

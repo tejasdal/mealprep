@@ -12,17 +12,17 @@
         app:layout_constraintTop_toTopOf="parent"
         android:backgroundTint="@color/colorWhite"
         >
+
         <com.google.android.material.chip.Chip
             android:id="@+id/btn_logout"
-            android:text="Logout"
-            android:textAppearance="?attr/textAppearanceBody1"
-            android:textStyle="bold"
-            android:textColor="@color/colorPrimaryDark"
-            android:layout_gravity="right"
-            android:layout_margin="28dp"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-        />
+            android:layout_gravity="right"
+            android:layout_margin="28dp"
+            android:text="@string/logout"
+            android:textAppearance="?attr/textAppearanceBody1"
+            android:textColor="@color/colorPrimaryDark"
+            android:textStyle="bold" />
         <ImageView
             android:id="@+id/img_profile"
             android:layout_width="88dp"
@@ -46,12 +46,12 @@
         android:id="@+id/txt_recently_view"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Recently Viewed"
-        android:textAppearance="@style/TextAppearance.RecipeTheme.Subtitle1.Accent"
-        android:padding="@dimen/recipe_text_view_padding"
-        app:layout_constraintTop_toBottomOf="@id/upload_app_bar_layout"
         android:layout_margin="@dimen/main_item_margin"
-        />
+        android:padding="@dimen/recipe_text_view_padding"
+        android:text="@string/recently_viewed"
+        android:textAppearance="@style/TextAppearance.RecipeTheme.Subtitle1.Accent"
+        app:layout_constraintTop_toBottomOf="@id/upload_app_bar_layout"
+        tools:layout_editor_absoluteX="10dp" />
     <!--    List of Recipe of Recently viewed-->
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/list_recently_viewed"
@@ -66,12 +66,12 @@
         android:id="@+id/txt_uploaded_recipe"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Uploaded Recipe"
-        android:textAppearance="@style/TextAppearance.RecipeTheme.Subtitle1.Accent"
-        android:padding="@dimen/recipe_text_view_padding"
-        app:layout_constraintTop_toBottomOf="@id/list_recently_viewed"
         android:layout_margin="@dimen/main_item_margin"
-        />
+        android:padding="@dimen/recipe_text_view_padding"
+        android:text="@string/uploaded_recipes"
+        android:textAppearance="@style/TextAppearance.RecipeTheme.Subtitle1.Accent"
+        app:layout_constraintTop_toBottomOf="@id/list_recently_viewed"
+        tools:layout_editor_absoluteX="10dp" />
 <!--    List of uploaded recipe-->
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/list_uploaded"
@@ -97,17 +97,16 @@
         android:id="@+id/fab_upload"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Uplaod"
+        android:layout_marginRight="12dp"
+        android:layout_marginBottom="62dp"
+        android:backgroundTint="@color/colorPrimaryDark"
+        android:text="@string/upload"
         android:textColor="@color/colorWhite"
         app:icon="@drawable/ic_file_upload"
         app:iconGravity="end"
         app:iconTint="@color/colorWhite"
-        android:backgroundTint="@color/colorPrimaryDark"
-        app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintBottom_toBottomOf="parent"
-        android:layout_marginRight="12dp"
-        android:layout_marginBottom="62dp"
-        />
+        app:layout_constraintRight_toRightOf="parent" />
 <!--    Gallery fab-->
     <com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton
         android:id="@+id/fab_gallery"

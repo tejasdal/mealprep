@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:layout_marginBottom="?android:attr/actionBarSize"
@@ -15,17 +16,20 @@
         app:liftOnScroll="true"
         android:focusableInTouchMode="true"
         >
+
         <EditText
             android:id="@+id/search_bar"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="Search"
-            android:drawableLeft="@drawable/ic_search"
-            android:background="@drawable/background_search"
             android:layout_margin="@dimen/main_item_margin"
+            android:background="@drawable/background_search"
+            android:drawableStart="@drawable/ic_search"
+            android:drawableLeft="@drawable/ic_search"
+            android:hint="@string/search_hint"
+            android:importantForAutofill="no"
+            android:inputType="text"
             android:padding="@dimen/main_item_margin"
-            android:textAlignment="center"
-            />
+            android:gravity="center" />
 
     </com.google.android.material.appbar.AppBarLayout>
 
@@ -42,50 +46,51 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             >
+
             <ImageView
                 android:id="@+id/img_main_recipe"
                 android:layout_width="match_parent"
                 android:layout_height="350dp"
-                app:layout_constraintTop_toTopOf="@+id/layout_constraint_1"
                 android:layout_margin="@dimen/main_item_margin"
-                />
+                android:contentDescription="@string/home_image_description"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/layout_constraint_1" />
 <!--            Text on Image view-->
             <TextView
                 android:id="@+id/txt_main_recipe"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Manchurian Fried Rice"
-                android:textAppearance="?attr/textAppearanceHeadline4"
-                android:textColor="@color/colorWhite"
+                android:layout_margin="@dimen/main_item_margin"
                 android:gravity="center"
                 android:padding="@dimen/recipe_text_view_padding"
+                android:text="@string/home_image_title"
+                android:textAppearance="?attr/textAppearanceHeadline4"
+                android:textColor="@color/colorWhite"
                 app:layout_constraintBottom_toBottomOf="@+id/img_main_recipe"
-                android:layout_margin="@dimen/main_item_margin"
-                />
+                tools:layout_editor_absoluteX="10dp" />
+
             <TextView
                 android:id="@+id/txt_main_recipe_bg"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="       "
-                android:textAppearance="@style/TextAppearance.RecipeTheme.Headline4"
-                android:padding="12dp"
-                app:layout_constraintBottom_toBottomOf="@+id/img_main_recipe"
-                android:layout_marginLeft="@dimen/main_item_margin"
-                android:layout_marginRight="@dimen/main_item_margin"
-                android:background="@drawable/background_img_text"
                 android:alpha="0.6"
-                />
+                android:background="@drawable/background_img_text"
+                android:padding="12dp"
+                android:textAppearance="@style/TextAppearance.RecipeTheme.Headline4"
+                app:layout_constraintBottom_toBottomOf="@+id/img_main_recipe"
+                tools:layout_editor_absoluteX="10dp" />
 <!--            Category 1 Headline-->
             <TextView
                 android:id="@+id/txt_category1"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Desert Tonight"
-                android:textAppearance="@style/TextAppearance.RecipeTheme.Subtitle1.Accent"
-                android:padding="@dimen/recipe_text_view_padding"
-                app:layout_constraintTop_toBottomOf="@id/img_main_recipe"
                 android:layout_margin="@dimen/main_item_margin"
-                />
+                android:padding="@dimen/recipe_text_view_padding"
+                android:text="@string/home_title1"
+                android:textAppearance="@style/TextAppearance.RecipeTheme.Subtitle1.Accent"
+                app:layout_constraintTop_toBottomOf="@id/img_main_recipe"
+                tools:layout_editor_absoluteX="10dp" />
         <!--    List of Recipe of Category 1-->
             <androidx.recyclerview.widget.RecyclerView
                 android:id="@+id/list_recent_recipe1"
@@ -100,12 +105,12 @@
                 android:id="@+id/txt_category2"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Party Food"
-                android:textAppearance="@style/TextAppearance.RecipeTheme.Subtitle1.Accent"
-                android:padding="@dimen/recipe_text_view_padding"
-                app:layout_constraintTop_toBottomOf="@id/list_recent_recipe1"
                 android:layout_margin="@dimen/main_item_margin"
-                />
+                android:padding="@dimen/recipe_text_view_padding"
+                android:text="@string/home_title2"
+                android:textAppearance="@style/TextAppearance.RecipeTheme.Subtitle1.Accent"
+                app:layout_constraintTop_toBottomOf="@id/list_recent_recipe1"
+                tools:layout_editor_absoluteX="10dp" />
             <!--    List of Recipe of Category 2-->
             <androidx.recyclerview.widget.RecyclerView
                 android:id="@+id/list_recent_recipe2"
@@ -120,12 +125,12 @@
                 android:id="@+id/txt_category3"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Recent"
-                android:textAppearance="@style/TextAppearance.RecipeTheme.Subtitle1.Accent"
-                android:padding="@dimen/recipe_text_view_padding"
-                app:layout_constraintTop_toBottomOf="@id/list_recent_recipe2"
                 android:layout_margin="@dimen/main_item_margin"
-                />
+                android:padding="@dimen/recipe_text_view_padding"
+                android:text="@string/recent"
+                android:textAppearance="@style/TextAppearance.RecipeTheme.Subtitle1.Accent"
+                app:layout_constraintTop_toBottomOf="@id/list_recent_recipe2"
+                tools:layout_editor_absoluteX="10dp" />
     <!--        List of Recipe of Category 4-->
             <androidx.recyclerview.widget.RecyclerView
                 android:id="@+id/list_recent_recipe4"

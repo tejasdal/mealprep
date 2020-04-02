@@ -13,13 +13,13 @@
         android:layout_height="wrap_content"
         app:layout_constraintTop_toTopOf="parent"
         >
+
         <androidx.appcompat.widget.Toolbar
             android:id="@+id/app_bar_upload"
+            style="@style/RecipeTheme.Toolbar"
             android:layout_width="match_parent"
             android:layout_height="?attr/actionBarSize"
-            style="@style/RecipeTheme.Toolbar"
-            app:title="Upload Recipe"
-            />
+            app:title="@string/upload_title" />
     </com.google.android.material.appbar.AppBarLayout>
 
 <!--    Video view for upload recipe-->
@@ -34,23 +34,22 @@
         android:id="@+id/edit_text_layout_recipe_name"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="Enter Recipe Name"
-        app:layout_constraintTop_toBottomOf="@+id/upload_video_view"
         android:layout_margin="@dimen/main_item_margin"
-        >
+        android:hint="@string/upload_hint"
+        app:layout_constraintTop_toBottomOf="@+id/upload_video_view"
+        tools:layout_editor_absoluteX="10dp">
+
         <com.google.android.material.textfield.TextInputEditText
             android:id="@+id/edit_text_recipe_name"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:textAppearance="?attr/textAppearanceBody1"
-            />
+            android:textAppearance="?attr/textAppearanceBody1" />
     </com.google.android.material.textfield.TextInputLayout>
 <!--    Upload Button-->
     <com.google.android.material.button.MaterialButton
         android:id="@+id/btn_upload"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="UPLOAD RECIPE"
-        app:layout_constraintBottom_toBottomOf="parent"
-        />
+        android:text="@string/upload_btn"
+        app:layout_constraintBottom_toBottomOf="parent" />
 </androidx.constraintlayout.widget.ConstraintLayout>

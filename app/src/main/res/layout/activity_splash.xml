@@ -12,12 +12,12 @@
         android:id="@+id/splash_logo"
         android:layout_width="150dp"
         android:layout_height="150dp"
-        android:src="@drawable/ic_app_logo_sample"
+        app:srcCompat="@drawable/ic_app_logo_sample"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         android:layout_marginTop="150dp"
-        />
+        android:contentDescription="@string/logo_content_description" />
 <!--    Text View for app name on Splash Screen-->
     <TextView
         android:id="@+id/splash_title_name"
@@ -38,14 +38,13 @@
         android:id="@+id/splash_product_of"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Product of"
-        android:textSize="15sp"
         android:fontFamily="sans-serif-condensed-light"
+        android:text="@string/product_of"
         android:textColor="@color/splashScreen"
+        android:textSize="15sp"
         app:layout_constraintBottom_toTopOf="@id/splash_team_name"
         app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        />
+        app:layout_constraintRight_toRightOf="parent" />
 
 <!--    Text view for Team name on splash screen-->
     <TextView
