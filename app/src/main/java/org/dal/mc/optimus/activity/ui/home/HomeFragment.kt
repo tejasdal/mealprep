@@ -10,6 +10,7 @@ import android.widget.TextView
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProviders
+import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
@@ -50,7 +51,7 @@ class HomeFragment : Fragment() {
         //set onclick listener on edit text
         search_bar.inputType = InputType.TYPE_NULL
         search_bar.setOnClickListener {
-            navigateTo(this.requireContext(), RecipeActivity::class.java)
+            findNavController().navigate(R.id.action_navigation_home_to_searchFragment)
         }
 
 

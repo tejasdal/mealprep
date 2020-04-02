@@ -38,12 +38,12 @@ class RecipeActivity : AppCompatActivity() {
         this.setSupportActionBar(app_bar_recipe)
         //to enable back button on app bar.
         supportActionBar?.setDisplayHomeAsUpEnabled(true)
-//        supportActionBar?.setDisplayShowHomeEnabled(true)
+        supportActionBar?.setDisplayShowHomeEnabled(true)
         //fetch recipe item
         recipeItem = intent.getSerializableExtra("recipe") as RecipeItem
         setRecipeName()
         //set video view
-        var pathVideo = "android.resource://org.dal.mc.optimus.activity.ui./"+ R.raw.recipe1
+        var pathVideo = "android.resource://"+packageName+"/raw/recipe1"
         var uri = Uri.parse(pathVideo)
         recipe_video_view.setVideoURI(uri)
         recipe_video_view.start()
@@ -252,12 +252,12 @@ class RecipeActivity : AppCompatActivity() {
                 }
                 true
             }
-            R.id.homeAsUp -> {
+            R.id.home -> {
                 onBackPressed()
-                false
+                true
             }
             else -> {
-                false
+                return super.onOptionsItemSelected(item)
             }
         }
     }

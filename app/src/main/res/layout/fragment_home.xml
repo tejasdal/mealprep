@@ -68,7 +68,7 @@
                 android:layout_height="wrap_content"
                 android:text="       "
                 android:textAppearance="@style/TextAppearance.RecipeTheme.Headline4"
-                android:padding="@dimen/recipe_text_view_padding"
+                android:padding="12dp"
                 app:layout_constraintBottom_toBottomOf="@+id/img_main_recipe"
                 android:layout_marginLeft="@dimen/main_item_margin"
                 android:layout_marginRight="@dimen/main_item_margin"

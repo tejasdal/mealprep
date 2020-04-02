@@ -26,9 +26,7 @@ class ForgotPasswordDialog : DialogFragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         btn_forgot.setOnClickListener {
-
-
-
+            resetEmail()
         }
     }
 
@@ -43,13 +41,13 @@ class ForgotPasswordDialog : DialogFragment() {
                 .addOnCompleteListener {task ->
                     if(task.isSuccessful) {
                         Snackbar.make(
-                            activity!!.findViewById(R.id.recipe_app_bar_like),
+                            activity!!.findViewById(R.id.btn_Login),
                             "Email Sent!", Snackbar.LENGTH_SHORT).show()
                             dismiss()
                     }
                     else {
                         Snackbar.make(
-                            activity!!.findViewById(R.id.recipe_app_bar_like),
+                            activity!!.findViewById(R.id.btn_Login),
                             "Failed to sent Email.", Snackbar.LENGTH_SHORT).show()
                         dismiss()
                     }

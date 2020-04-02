@@ -10,7 +10,11 @@
         android:name="org.dal.mc.optimus.activity.ui.home.HomeFragment"
         android:label="@string/title_home"
         tools:layout="@layout/fragment_home"
-        />
+        >
+        <action
+            android:id="@+id/action_navigation_home_to_searchFragment"
+            app:destination="@id/searchFragment" />
+    </fragment>
 
     <fragment
         android:id="@+id/navigation_profile"
@@ -38,5 +42,24 @@
         android:id="@+id/navigation_my_forgot_password"
         android:name="org.dal.mc.optimus.activity.ui.login.ForgotPasswordFragment"
         tools:layout="@layout/fragment_forgot_password" />
+    <fragment
+        android:id="@+id/searchFragment"
+        android:name="org.dal.mc.optimus.activity.ui.home.SearchFragment"
+        android:label="SearchFragment" >
+        <action
+            android:id="@+id/action_searchFragment_to_searchResultFragment"
+            app:destination="@id/searchResultFragment" />
+        <action
+            android:id="@+id/action_searchFragment_to_navigation_home"
+            app:destination="@id/navigation_home" />
+    </fragment>
+    <fragment
+        android:id="@+id/searchResultFragment"
+        android:name="org.dal.mc.optimus.activity.ui.home.SearchResultFragment"
+        android:label="SearchResultFragment" >
+        <action
+            android:id="@+id/action_searchResultFragment_to_searchFragment"
+            app:destination="@id/searchFragment" />
+    </fragment>
 
 </navigation>

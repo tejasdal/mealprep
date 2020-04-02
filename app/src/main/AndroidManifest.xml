@@ -14,10 +14,13 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/RecipeTheme">
-        <activity android:name=".activity.ui.upload.UploadRecipe"></activity>
+        <activity android:name=".activity.ui.upload.UploadRecipe"
+            android:parentActivityName=".activity.MainActivity"
+            ></activity>
         <activity
             android:name=".activity.ui.recipe.RecipeActivity"
             android:label=""
+            android:parentActivityName=".activity.MainActivity"
             android:theme="@style/RecipeTheme" />
         <activity
             android:name=".activity.ui.login.SignUpActivity"
