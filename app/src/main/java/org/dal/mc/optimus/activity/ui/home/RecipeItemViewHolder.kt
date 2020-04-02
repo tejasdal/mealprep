@@ -1,11 +1,14 @@
 package org.dal.mc.optimus.activity.ui.home
 
 import android.content.Context
+import android.content.Intent
+import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import android.widget.ImageView
 import android.widget.LinearLayout
 import android.widget.TextView
+import androidx.core.content.ContextCompat
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
 import com.bumptech.glide.load.MultiTransformation
@@ -41,7 +44,9 @@ class RecipeItemViewHolder (inflater: LayoutInflater, parent: ViewGroup):
         recipeName.text = recipeItem.recipeName
         //set OnClick listener
         recipeImg.setOnClickListener {
-            navigateTo(context, RecipeActivity::class.java)
+            val recipeIntent = Intent(context, RecipeActivity::class.java)
+            recipeIntent.putExtra("recipe", recipeItem)
+            context.startActivity(recipeIntent)
         }
     }
 

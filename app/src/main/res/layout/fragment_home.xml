@@ -19,8 +19,7 @@
             android:id="@+id/search_bar"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Search"
-            android:textColor="#928D8D"
+            android:hint="Search"
             android:drawableLeft="@drawable/ic_search"
             android:background="@drawable/background_search"
             android:layout_margin="@dimen/main_item_margin"
@@ -34,14 +33,14 @@
     <androidx.core.widget.NestedScrollView
         android:id="@+id/layout_nested"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="0dp"
         app:layout_constraintTop_toBottomOf="@+id/layout_app_bar"
         app:layout_behavior="@string/appbar_scrolling_view_behavior"
         >
         <androidx.constraintlayout.widget.ConstraintLayout
             android:id="@+id/layout_constraint_1"
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
+            android:layout_height="wrap_content"
             >
             <ImageView
                 android:id="@+id/img_main_recipe"
@@ -50,14 +49,62 @@
                 app:layout_constraintTop_toTopOf="@+id/layout_constraint_1"
                 android:layout_margin="@dimen/main_item_margin"
                 />
+<!--            Text on Image view-->
+            <TextView
+                android:id="@+id/txt_main_recipe"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Manchurian Fried Rice"
+                android:textAppearance="?attr/textAppearanceHeadline4"
+                android:textColor="@color/colorWhite"
+                android:gravity="center"
+                android:padding="@dimen/recipe_text_view_padding"
+                app:layout_constraintBottom_toBottomOf="@+id/img_main_recipe"
+                android:layout_margin="@dimen/main_item_margin"
+                />
+            <TextView
+                android:id="@+id/txt_main_recipe_bg"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="       "
+                android:textAppearance="@style/TextAppearance.RecipeTheme.Headline4"
+                android:padding="@dimen/recipe_text_view_padding"
+                app:layout_constraintBottom_toBottomOf="@+id/img_main_recipe"
+                android:layout_marginLeft="@dimen/main_item_margin"
+                android:layout_marginRight="@dimen/main_item_margin"
+                android:background="@drawable/background_img_text"
+                android:alpha="0.6"
+                />
+<!--            Category 1 Headline-->
+            <TextView
+                android:id="@+id/txt_category1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Desert Tonight"
+                android:textAppearance="@style/TextAppearance.RecipeTheme.Subtitle1.Accent"
+                android:padding="@dimen/recipe_text_view_padding"
+                app:layout_constraintTop_toBottomOf="@id/img_main_recipe"
+                android:layout_margin="@dimen/main_item_margin"
+                />
         <!--    List of Recipe of Category 1-->
             <androidx.recyclerview.widget.RecyclerView
                 android:id="@+id/list_recent_recipe1"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="10dp"
-                app:layout_constraintTop_toBottomOf="@+id/img_main_recipe"
+                app:layout_constraintTop_toBottomOf="@+id/txt_category1"
                 app:layout_constraintLeft_toLeftOf="parent"
+                />
+<!--            Category 2 Headline-->
+            <TextView
+                android:id="@+id/txt_category2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Party Food"
+                android:textAppearance="@style/TextAppearance.RecipeTheme.Subtitle1.Accent"
+                android:padding="@dimen/recipe_text_view_padding"
+                app:layout_constraintTop_toBottomOf="@id/list_recent_recipe1"
+                android:layout_margin="@dimen/main_item_margin"
                 />
             <!--    List of Recipe of Category 2-->
             <androidx.recyclerview.widget.RecyclerView
@@ -65,8 +112,19 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="10dp"
-                app:layout_constraintTop_toBottomOf="@+id/list_recent_recipe1"
+                app:layout_constraintTop_toBottomOf="@id/txt_category2"
                 app:layout_constraintLeft_toLeftOf="parent"
+                />
+<!--            Category 3 Headline-->
+            <TextView
+                android:id="@+id/txt_category3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Recent"
+                android:textAppearance="@style/TextAppearance.RecipeTheme.Subtitle1.Accent"
+                android:padding="@dimen/recipe_text_view_padding"
+                app:layout_constraintTop_toBottomOf="@id/list_recent_recipe2"
+                android:layout_margin="@dimen/main_item_margin"
                 />
     <!--        List of Recipe of Category 4-->
             <androidx.recyclerview.widget.RecyclerView
@@ -76,7 +134,7 @@
                 android:layout_marginTop="10dp"
                 android:layout_marginLeft="@dimen/main_item_margin"
                 android:layout_marginRight="@dimen/main_item_margin"
-                app:layout_constraintTop_toBottomOf="@+id/list_recent_recipe2"
+                app:layout_constraintTop_toBottomOf="@+id/txt_category3"
                 app:layout_constraintLeft_toLeftOf="parent"
                 />
         </androidx.constraintlayout.widget.ConstraintLayout>

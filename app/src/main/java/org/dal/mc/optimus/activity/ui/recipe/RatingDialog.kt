@@ -22,15 +22,14 @@ class RatingDialog : DialogFragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        Toast.makeText(activity,"view created", Toast.LENGTH_SHORT).show()
 //        Just remove the dialog box.
-        btn_rating_dilike.setOnClickListener {
+        btn_rating_like.setOnClickListener {
             Snackbar.make(
                 activity!!.findViewById(R.id.recipe_app_bar_like),
                 "I liked it!", Snackbar.LENGTH_SHORT).show()
             dismiss()
         }
-        btn_rating_like.setOnClickListener {
+        btn_rating_dilike.setOnClickListener {
             Snackbar.make(
                 activity!!.findViewById(R.id.recipe_app_bar_like),
                 "Oops! I don't liked it!", Snackbar.LENGTH_SHORT).show()

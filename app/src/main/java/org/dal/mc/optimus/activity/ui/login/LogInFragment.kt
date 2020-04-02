@@ -31,6 +31,7 @@ import kotlinx.android.synthetic.main.fragment_login.et_email
 import kotlinx.android.synthetic.main.fragment_login.ip_layout_email
 import kotlinx.android.synthetic.main.fragment_signup.*
 import org.dal.mc.optimus.R
+import org.dal.mc.optimus.activity.ui.recipe.RatingDialog
 import java.util.regex.Pattern
 
 class LogInFragment : Fragment() {
@@ -139,7 +140,10 @@ class LogInFragment : Fragment() {
 
         /** Setting the listner events **/
         forgotPassword!!.setOnClickListener {
-            findNavController().navigate(R.id.navigation_my_forgot_password)
+            //Open rating dialog.
+            var forgotDialog = ForgotPasswordDialog()
+            forgotDialog.show(this.requireFragmentManager(), "")
+//            findNavController().navigate(R.id.navigation_my_forgot_password)
         }
 
         btnCreateAccount!!.setOnClickListener {

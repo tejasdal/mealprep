@@ -4,16 +4,31 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-    <TextView
-        android:id="@+id/text_notifications"
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/myrecipe_app_bar_layout"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="8dp"
-        android:layout_marginEnd="8dp"
-        android:textAlignment="center"
-        android:textSize="20sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        android:backgroundTint="@color/colorWhite"
+        >
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/app_bar_myrecipe"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            style="@style/RecipeTheme.Toolbar"
+            app:title="My Recipes"
+            app:titleTextAppearance="?attr/textAppearanceHeadline6"
+            />
+    </com.google.android.material.appbar.AppBarLayout>
+<!--    List of MyRecipes-->
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/list_my_recipes"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="@dimen/main_item_margin"
+        android:layout_marginRight="@dimen/main_item_margin"
+        app:layout_constraintTop_toBottomOf="@+id/myrecipe_app_bar_layout"
+        app:layout_constraintLeft_toLeftOf="parent"
+        />
 </androidx.constraintlayout.widget.ConstraintLayout>

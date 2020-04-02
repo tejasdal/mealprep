@@ -2,26 +2,34 @@ package org.dal.mc.optimus.activity.ui.recipe
 
 import android.app.LauncherActivity
 import android.net.Uri
+import android.os.Build
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.Menu
 import android.view.MenuItem
 import android.view.View
+import androidx.annotation.RequiresApi
 import androidx.appcompat.widget.Toolbar
 import androidx.core.app.ShareCompat
+import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.google.android.material.snackbar.Snackbar
+import com.google.firebase.auth.FirebaseAuth
 import kotlinx.android.synthetic.main.activity_recipe.*
 import kotlinx.android.synthetic.main.fragment_home.*
+import kotlinx.android.synthetic.main.fragment_my_recipe.*
 import org.dal.mc.optimus.R
 import org.dal.mc.optimus.activity.ui.home.RecipeItemAdapter
 import org.dal.mc.optimus.model.IngredientItem
 import org.dal.mc.optimus.model.RecipeItem
+import org.dal.mc.optimus.util.fetchMyRecipes
 import java.lang.StringBuilder
+import java.util.function.Predicate
 
 class RecipeActivity : AppCompatActivity() {
 
     private var isLiked:Boolean = false
+    private lateinit var recipeItem: RecipeItem
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -31,6 +39,9 @@ class RecipeActivity : AppCompatActivity() {
         //to enable back button on app bar.
         supportActionBar?.setDisplayHomeAsUpEnabled(true)
 //        supportActionBar?.setDisplayShowHomeEnabled(true)
+        //fetch recipe item
+        recipeItem = intent.getSerializableExtra("recipe") as RecipeItem
+        setRecipeName()
         //set video view
         var pathVideo = "android.resource://org.dal.mc.optimus.activity.ui./"+ R.raw.recipe1
         var uri = Uri.parse(pathVideo)
@@ -42,6 +53,10 @@ class RecipeActivity : AppCompatActivity() {
         exportNutritionList()
         viewHideNutritionInfo()
         setRatingDialoge()
+    }
+
+    private fun setRecipeName() {
+        txt_recipe_name.setText(recipeItem.recipeName)
     }
 
     /**
@@ -176,11 +191,10 @@ class RecipeActivity : AppCompatActivity() {
              */
             var ingredients: List<IngredientItem> = listOf(
                 IngredientItem("banana pudding mix", "3.4oz"),
-                IngredientItem("banana pudding mix", "3.4oz"),
-                IngredientItem("banana pudding mix", "3.4oz"),
-                IngredientItem("banana pudding mix", "3.4oz"),
-                IngredientItem("banana pudding mix", "3.4oz"),
-                IngredientItem("banana pudding mix", "3.4oz")
+                IngredientItem("large ripe banana", "2"),
+                IngredientItem("egg", "2"),
+                IngredientItem("vanilla extract", "1 teaspoon"),
+                IngredientItem("cinnamon", "1 teaspoon")
             )
             adapter = IngredientListAdapter(ingredients)
         }
@@ -199,6 +213,7 @@ class RecipeActivity : AppCompatActivity() {
     }
 
     //Handle menu select
+    @RequiresApi(Build.VERSION_CODES.N)
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
         //TODO: Handle select event on menu. Add switch statement on Id of menu item and add logic for each one.
         return when(item.itemId){
@@ -212,18 +227,28 @@ class RecipeActivity : AppCompatActivity() {
                 true
             }
             R.id.recipe_app_bar_like -> {
-                //on Like menu item selected
-                if (isLiked){
-                    //already like, then disliked this.
-                    isLiked = false
-                    item.setIcon(R.drawable.ic_favorite_border)
+                var user = FirebaseAuth.getInstance().currentUser
+                if (user != null){
+                    //User is signed in.
+                    //on Like menu item selected
+                    if (isLiked){
+                        //already like, then disliked this.
+                        isLiked = false
+                        item.setIcon(R.drawable.ic_favorite_border)
+                        Snackbar.make(window.decorView.findViewById(R.id.recipe_app_bar_like),
+                            "Recipe removed from MyRecipe!", Snackbar.LENGTH_SHORT).show()
+                        fetchMyRecipes().removeIf(Predicate { item -> item.recipeName.equals(recipeItem.recipeName) })
+                    }else{
+                        isLiked = true
+                        item.setIcon(R.drawable.ic_favorite)
+                        Snackbar.make(window.decorView.findViewById(R.id.recipe_app_bar_like),
+                            "Recipe added to MyRecipe!", Snackbar.LENGTH_SHORT).show()
+                        fetchMyRecipes().add(recipeItem)
+                    }
+                }else {
+                    //User is not signed in. Redirect them to login page.
                     Snackbar.make(window.decorView.findViewById(R.id.recipe_app_bar_like),
-                        "Recipe removed from MyRecipe!", Snackbar.LENGTH_SHORT).show()
-                }else{
-                    isLiked = true
-                    item.setIcon(R.drawable.ic_favorite)
-                    Snackbar.make(window.decorView.findViewById(R.id.recipe_app_bar_like),
-                        "Recipe added to MyRecipe!", Snackbar.LENGTH_SHORT).show()
+                        "Please sign in to add recipe to MyRecipe!", Snackbar.LENGTH_SHORT).show()
                 }
                 true
             }

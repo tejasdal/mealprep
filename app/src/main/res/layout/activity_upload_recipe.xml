@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activity.ui.upload.UploadRecipe">
+
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/upload_app_bar_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent"
+        >
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/app_bar_upload"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            style="@style/RecipeTheme.Toolbar"
+            app:title="Upload Recipe"
+            />
+    </com.google.android.material.appbar.AppBarLayout>
+
+<!--    Video view for upload recipe-->
+    <VideoView
+        android:id="@+id/upload_video_view"
+        android:layout_width="match_parent"
+        android:layout_height="400dp"
+        app:layout_constraintTop_toBottomOf="@+id/upload_app_bar_layout"
+        />
+<!--    Edit Text for entering recipe name-->
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/edit_text_layout_recipe_name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Enter Recipe Name"
+        app:layout_constraintTop_toBottomOf="@+id/upload_video_view"
+        android:layout_margin="@dimen/main_item_margin"
+        >
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/edit_text_recipe_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textAppearance="?attr/textAppearanceBody1"
+            />
+    </com.google.android.material.textfield.TextInputLayout>
+<!--    Upload Button-->
+    <com.google.android.material.button.MaterialButton
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="UPLOAD RECIPE"
+        app:layout_constraintBottom_toBottomOf="parent"
+        />
+</androidx.constraintlayout.widget.ConstraintLayout>

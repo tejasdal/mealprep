@@ -1,6 +1,7 @@
 package org.dal.mc.optimus.activity.ui.home
 
 import android.content.Context
+import android.content.Intent
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import android.widget.ImageView
@@ -41,7 +42,9 @@ class RecipeItemGridViewHolder (inflater: LayoutInflater, parent: ViewGroup):
         recipeName.text = recipeItem.recipeName
         //set OnClick listener
         recipeImg.setOnClickListener {
-            navigateTo(context, RecipeActivity::class.java)
+            val recipeIntent = Intent(context, RecipeActivity::class.java)
+            recipeIntent.putExtra("recipe", recipeItem)
+            context.startActivity(recipeIntent)
         }
     }
 
