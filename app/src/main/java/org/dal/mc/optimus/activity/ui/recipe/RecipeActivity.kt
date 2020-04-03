@@ -75,7 +75,7 @@ class RecipeActivity : AppCompatActivity() {
      * Method to view or hide nutrition info.
      */
     private fun viewHideNutritionInfo(){
-        var hideStr = "Hide Info -"
+        var hideStr = "Hide info –"
         var viewStr = "View Info +"
 
         btn_hide_info.setOnClickListener {

@@ -15,17 +15,21 @@
         app:liftOnScroll="true"
         android:focusableInTouchMode="true"
         >
+
         <EditText
             android:id="@+id/edit_text_search_bar_results"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="Search"
-            android:drawableLeft="@drawable/ic_search"
-            android:background="@drawable/background_search"
             android:layout_margin="@dimen/main_item_margin"
+            android:background="@drawable/background_search"
+            android:drawableStart="@drawable/ic_search"
+            android:drawableLeft="@drawable/ic_search"
+            android:hint="@string/search_hint"
+            android:importantForAutofill="no"
+            android:inputType="text"
             android:padding="@dimen/main_item_margin"
             android:textAlignment="center"
-            />
+            android:gravity="center_horizontal" />
     </com.google.android.material.appbar.AppBarLayout>
 
     <HorizontalScrollView
@@ -35,7 +39,7 @@
         app:layout_constraintTop_toBottomOf="@+id/layout_app_bar_search_result"
         app:layout_constraintLeft_toLeftOf="parent"
         android:layout_marginLeft="4dp"
-        >
+        android:layout_marginStart="4dp">
         <com.google.android.material.chip.ChipGroup
             android:id="@+id/recent_chip_group_result"
             android:layout_width="match_parent"

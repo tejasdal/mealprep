@@ -30,7 +30,6 @@
         thicker pie crust for the taste.
     </string>
 
-
     <!--For Profile-->
     <string name="upload">Upload</string>
     <string name="recently_viewed">Recently Viewed</string>
@@ -41,10 +40,10 @@
     <!--For Home-->
     <string name="home_image_title">Manchurian Fried Rice</string>
     <string name="home_image_description">Home Image</string>
+    <string name="recipe_image_description">Home Image</string>
     <string name="home_title1">Dessert Tonight</string>
     <string name="home_title2">Party Food</string>
     <string name="recent">Recent</string>
-
 
     <!--For Rating Dialog-->
     <string name="rating_message">We\'re excited you tried it!</string>
@@ -65,7 +64,6 @@
     <string name="upload_btn">UPLOAD RECIPE</string>
 
     <!--For View Recipe-->
-
     <string name="recipe_name_sample">Recipe Name</string>
     <string name="recipe_ingredients_title">Ingredients</string>
     <string name="recipe_nutrition_title">Nutrition Facts</string>
