@@ -142,7 +142,8 @@ class ProfileFragment : Fragment() {
      * Method to fetch user profile image and name.
      */
     private fun setProfileData(user: FirebaseUser) {
-        Glide.with(this).load(user.photoUrl).apply( RequestOptions()
+        Glide.with(this).load(user.photoUrl)
+            .apply( RequestOptions()
             .transform( MultiTransformation(RoundedCorners(250))))
             .into(img_profile)
         txt_user_name_profile.setText(user.displayName)

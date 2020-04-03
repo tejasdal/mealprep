@@ -1,5 +1,6 @@
 package org.dal.mc.optimus.activity.ui.login
 
+/** User class for storing user details **/
 class User {
 
     var first_name: String? = null

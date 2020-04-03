@@ -6,6 +6,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     tools:context=".activity.ui.login.LogInFragment">
 
+    <!-- Meal prep text -->
     <TextView
         android:id="@+id/txt_title_name"
         android:layout_width="wrap_content"
