@@ -4,7 +4,6 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.Toast
 import androidx.fragment.app.DialogFragment
 import com.google.android.material.snackbar.Snackbar
 import kotlinx.android.synthetic.main.dialog_rating.*
@@ -29,16 +28,16 @@ class RatingDialog : DialogFragment() {
                 "I liked it!", Snackbar.LENGTH_SHORT).show()
             dismiss()
         }
-        btn_rating_dilike.setOnClickListener {
+        btn_rating_dislike.setOnClickListener {
             Snackbar.make(
                 activity!!.findViewById(R.id.recipe_app_bar_like),
-                "Oops! I don't liked it!", Snackbar.LENGTH_SHORT).show()
+                "Oops! I didn't like it!", Snackbar.LENGTH_SHORT).show()
             dismiss()
         }
         btn_rating_exit.setOnClickListener {
             Snackbar.make(
                 activity!!.findViewById(R.id.recipe_app_bar_like),
-                "Nevermind!", Snackbar.LENGTH_SHORT).show()
+                "Never mind!", Snackbar.LENGTH_SHORT).show()
             dismiss()
         }
     }
