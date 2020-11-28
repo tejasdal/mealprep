@@ -1,3 +1,16 @@
+# MealPrep
+
+## Authors
+
+* Tejas Patel(tejas.patel@dal.ca)
+* Jatin Partap Rana
+* Ridham Dabhi
+* Satya Kumar Itekela
+* Krupa Patel
+* Joshin Johnson
+
+## About Application
+
 This is an android based app which is used to to find and view different type of recipes .
 All the recipes are displayed in video format along with the nutritional facts and the
 ingredients required for the recipe. Users can even export the nutritional facts. Users
@@ -8,7 +21,17 @@ Requirements to install the app:
 1)User phone need to have android operating system
 2)This app is supported by android marshmallow and above versions.
 
-References For Code:
+## Screenshots
+
+<img src="https://github.com/tejasdal/mealprep/blob/master/SS/1%20Flash%20Page.jpg" alt="drawing" width="250"/> <img src="https://github.com/tejasdal/mealprep/blob/master/SS/10%20SignUp%20Page.jpg" alt="drawing" width="250"/> <img src="https://github.com/tejasdal/mealprep/blob/master/SS/9%20Login%20Page.jpg" alt="drawing" width="250"/>
+
+<img src="https://github.com/tejasdal/mealprep/blob/master/SS/2%20Home%20Page.jpg" alt="drawing" width="250"/><img src="https://github.com/tejasdal/mealprep/blob/master/SS/11%20Recipe%20Page%201.jpg" alt="drawing" width="250"/><img src="https://github.com/tejasdal/mealprep/blob/master/SS/12%20Recipe%20Page%202.jpg" alt="drawing" width="250"/>
+
+<img src="https://github.com/tejasdal/mealprep/blob/master/SS/3%20Like%20Dialoge.jpg" alt="drawing" width="250"/><img src="https://github.com/tejasdal/mealprep/blob/master/SS/4%20Share%20Recipe.jpg" alt="drawing" width="250"/><img src="https://github.com/tejasdal/mealprep/blob/master/SS/5%20My%20Saved%20Recipe.jpg" alt="drawing" width="250"/>
+
+<img src="https://github.com/tejasdal/mealprep/blob/master/SS/6%20Search%20Page.jpg" alt="drawing" width="250"/><img src="https://github.com/tejasdal/mealprep/blob/master/SS/7%20Filter%20Recipe%20Page.jpg" alt="drawing" width="250"/><img src="https://github.com/tejasdal/mealprep/blob/master/SS/8%20Profile%20Page.jpg" alt="drawing" width="250"/>
+
+## References For Code:
 [1]: Material Components for Android. 2020. Chips - Material Components For Android. [online] Available at: <https://material.io/develop/android/components/chip/> [Accessed 3 April 2020].
 [2]: Material Components for Android. 2020. Buttons - Material Components For Android. [online] Available at: <https://material.io/develop/android/components/buttons/> [Accessed 3 April 2020].
 [3]: Material Components for Android. 2020. Extended Floating Action Button - Material Components For Android. [online] Available at: <https://material.io/develop/android/components/extended-floating-action-button/> [Accessed 3 April 2020].
